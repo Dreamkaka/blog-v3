@@ -7,48 +7,39 @@ import type {
 import { LinkPreset } from './types/config'
 
 export const siteConfig: SiteConfig = {
-  title: 'Fuwari',
-  subtitle: 'Demo Site',
-  lang: 'en',
+  title: 'XIAOHAN_TOKA',
+  subtitle: 'akas',
+  lang: 'zh_TW',
   themeHue: 250,
   banner: {
-    enable: false,
-    src: 'assets/images/demo-banner.png',
+    enable: true,
+    src: 'https://pximg.xiaohan-kaka.gay/img-original/img/2022/11/27/10/35/53/103134164_p0.jpg',
   },
 }
 
 export const navBarConfig: NavBarConfig = {
-  links: [
-    LinkPreset.Home,
-    LinkPreset.Archive,
-    LinkPreset.About,
-    {
-      name: 'GitHub',
-      url: 'https://github.com/saicaca/fuwari',
-      external: true,
-    },
-  ],
+  links: [LinkPreset.Home, LinkPreset.Archive, LinkPreset.About],
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/demo-avatar.png',
-  name: 'Lorem Ipsum',
-  bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  avatar: 'assets/images/114338280.jpg',
+  name: '幻夢曉寒kaka',
+  bio: '醉後不知天在水，滿船清夢壓星河',
   links: [
     {
       name: 'Twitter',
       icon: 'fa6-brands:twitter',
-      url: 'https://twitter.com',
+      url: 'https://twitter.com/Dreamkaka3',
     },
     {
-      name: 'Steam',
-      icon: 'fa6-brands:steam',
-      url: 'https://store.steampowered.com',
+      name: 'bilibili',
+      icon: 'fa6-brands:bilibili',
+      url: 'https://space.bilibili.com/516951032',
     },
     {
       name: 'GitHub',
       icon: 'fa6-brands:github',
-      url: 'https://github.com/saicaca/fuwari',
+      url: 'https://github.com/Dreamkaka',
     },
   ],
 }

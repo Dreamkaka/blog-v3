@@ -11,6 +11,7 @@ import License from "@components/misc/License.astro";
 import {licenseConfig} from "src/config";
 import Markdown from "@components/misc/Markdown.astro";
 import path from "path";
+import Comment from '@components/comment.astro';
 
 export async function getStaticPaths() {
     const blogEntries = await getCollection('posts', ({ data }) => {
@@ -88,6 +89,8 @@ const { remarkPluginFrontmatter } = await entry.render();
 
         </div>
     </div>
+
+
 
     <div class="flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full">
         <a href={getPostUrlBySlug(entry.data.nextSlug)} class="w-full font-bold overflow-hidden active:scale-95">

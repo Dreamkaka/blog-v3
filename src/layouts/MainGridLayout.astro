@@ -6,6 +6,7 @@ import {pathsEqual} from "@utils/url-utils";
 import Footer from "@components/Footer.astro";
 import BackToTop from "@components/control/BackToTop.astro";
 import {siteConfig} from "@/config";
+import Comment from "@components/comment.astro";
 
 interface Props {
     title: string;
@@ -34,6 +35,10 @@ const enableBanner = siteConfig.banner.enable
             <slot></slot>
         </main>
 
+    </div>
+
+    <div id="comment" class="col-span-2 onload-animation">
+        <Comment></Comment>
     </div>
 
     <div id="footer" class="grid-rows-3 col-span-2 mt-4 onload-animation">
