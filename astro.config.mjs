@@ -1,5 +1,6 @@
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
+import vercel from '@astrojs/vercel/static'
 import swup from '@swup/astro'
 import Compress from 'astro-compress'
 import icon from 'astro-icon'
@@ -22,12 +23,12 @@ const oklchToHex = str => {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://xiaohan-kaka.gay',
+  site: 'https://blog.xiaohan-kaka.gay',
   base: '/',
   integrations: [
     tailwind(),
     swup({
-      theme: false,
+      theme: true,
       animationClass: 'transition-',
       containers: ['main'],
       smoothScrolling: true,
@@ -49,6 +50,7 @@ export default defineConfig({
     }),
     svelte(),
   ],
+
   markdown: {
     remarkPlugins: [remarkMath, remarkReadingTime],
     rehypePlugins: [
@@ -79,6 +81,12 @@ export default defineConfig({
       ],
     ],
   },
+  //  output: 'server',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
   vite: {
     css: {
       preprocessorOptions: {
