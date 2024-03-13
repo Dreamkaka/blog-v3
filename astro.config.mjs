@@ -4,7 +4,7 @@ import vercel from '@astrojs/vercel/static'
 import swup from '@swup/astro'
 import Compress from 'astro-compress'
 import icon from 'astro-icon'
-import { defineConfig } from 'astro/config'
+import { defineConfig, passthroughImageService } from 'astro/config'
 import Color from 'colorjs.io'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeKatex from 'rehype-katex'
@@ -28,7 +28,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     swup({
-      theme: false,
+      theme: true,
       animationClass: 'transition-',
       containers: ['main'],
       smoothScrolling: true,
@@ -50,7 +50,9 @@ export default defineConfig({
     }),
     svelte(),
   ],
-
+  image: {
+    service: passthroughImageService(),
+  },
   markdown: {
     remarkPlugins: [remarkMath, remarkReadingTime],
     rehypePlugins: [
@@ -81,7 +83,7 @@ export default defineConfig({
       ],
     ],
   },
-  //  output: 'server',
+  // output: 'hybrid',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
