@@ -91,7 +91,6 @@ export default defineConfig({
       },
     },
   },
-  // output: 'stanic',
   adapter: vercel({
     webAnalytics: {
       enable: 'true',
