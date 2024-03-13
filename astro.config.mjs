@@ -1,6 +1,5 @@
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
-import vercel from '@astrojs/vercel/static'
 import swup from '@swup/astro'
 import Compress from 'astro-compress'
 import icon from 'astro-icon'
@@ -91,9 +90,4 @@ export default defineConfig({
       },
     },
   },
-  adapter: vercel({
-    webAnalytics: {
-      enable: 'true',
-    },
-  }),
 })
