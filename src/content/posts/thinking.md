@@ -4,7 +4,7 @@ published: 2024-01-09
 description: "一个简单的思考？"
 tags: ["思考","转载","辩证"]
 category: 思考
-draft: true
+draft: false
 ---
 # 前言
 从一位朋友那转载来的，已获得授权
