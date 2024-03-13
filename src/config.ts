@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
   themeHue: 250,
   banner: {
     enable: true,
-    src: 'https://pximg.xiaohan-kaka.gay/img-original/img/2022/11/27/10/35/53/103134164_p0.jpg',
+    src: 'assets/images/103134164.jpg',
   },
 }
 
