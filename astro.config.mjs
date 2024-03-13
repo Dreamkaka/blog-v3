@@ -28,7 +28,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     swup({
-      theme: true,
+      theme: false,
       animationClass: 'transition-',
       containers: ['main'],
       smoothScrolling: true,
